@@ -24,7 +24,7 @@ def isTargetColor(rgbaTuple: tuple) -> bool:
 
 def removeImageBackground(inputFilepath: str, outputFilepath: str = '') -> Image:
   image = Image.open(inputFilepath)
-  image = image.convert('RGBA') # RGBA 顏色編碼能夠設置透明度
+  image = image.convert('RGBA')
   pixdata = image.load()
   bgPixels = []
   notIncludeInside = False
